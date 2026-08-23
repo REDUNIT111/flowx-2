@@ -13,7 +13,10 @@
 <body>
 
     <header>
-        <h1>FlowX</h1>
+        <div class="brand">
+    <img src="flowx-icon.png" alt="FlowX logo">
+    <h1>FlowX</h1>
+</div>
         <p>Transport unused capacity efficiently.</p>
     </header>
 
@@ -29,17 +32,17 @@
                 🏠 Dashboard
             </button>
 
-            <button onclick="showTransport()">
-                🚚 Add Transport Capacity
-            </button>
+          <button id="addTransportBtn" onclick="showTransport()">
+    🚚 Add Transport Capacity
+</button>
 
-            <button onclick="showTransportList()">
-                🚛 Available Transport
-            </button>
+<button id="availableTransportBtn" onclick="showTransportList()">
+    🚛 Available Transport
+</button>
 
-            <button onclick="showTransportRequests()">
-                📋 Transport Requests
-            </button>
+<button id="transportRequestsBtn" onclick="showTransportRequests()">
+    📋 Transport Requests
+</button>
 
         </div>
 
