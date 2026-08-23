@@ -658,3 +658,19 @@ select:focus {
         gap: 12px;
     }
 }
+#sellInventoryBtn,
+#viewRequestsBtn,
+#addTransportBtn,
+#availableTransportBtn,
+#transportRequestsBtn {
+    transition: 0.2s ease;
+}
+
+#sellInventoryBtn.active,
+#viewRequestsBtn.active,
+#addTransportBtn.active,
+#availableTransportBtn.active,
+#transportRequestsBtn.active {
+    background-color: #000bd7;
+    color: white;
+}
