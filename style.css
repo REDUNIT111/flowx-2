@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,13 +25,11 @@ header {
     text-align: center;
 }
 
-
 header h1 {
     margin: 0;
     font-size: 48px;
     letter-spacing: 2px;
 }
-
 
 header p {
     margin: 12px 0 0;
@@ -74,11 +71,51 @@ main > button {
         background 0.2s;
 }
 
-
 main > button:hover {
     transform: translateY(-2px);
     background: #f9fafb;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FLOWX NAVIGATION
+   ========================= */
+
+.flowx-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 30px;
+}
+
+.flowx-navigation button {
+    background: white;
+    color: #222;
+    border: 1px solid #d1d5db;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+.flowx-navigation button:hover {
+    transform: translateY(-2px);
+    background: #f9fafb;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -88,13 +125,11 @@ main > button:hover {
 
 #sellerForm,
 #transportForm {
-
     display: none;
 
     background: white;
 
     padding: 30px;
-
     margin: 35px auto;
 
     max-width: 520px;
@@ -107,14 +142,10 @@ main > button:hover {
     text-align: center;
 }
 
-
 #sellerForm h2,
 #transportForm h2 {
-
     margin-top: 0;
-
     margin-bottom: 25px;
-
     font-size: 24px;
 }
 
@@ -124,11 +155,9 @@ main > button:hover {
    ========================= */
 
 input {
-
     display: block;
 
     width: 100%;
-
     max-width: 420px;
 
     padding: 13px 14px;
@@ -136,7 +165,6 @@ input {
     margin: 12px auto;
 
     border: 1px solid #d1d5db;
-
     border-radius: 8px;
 
     font-size: 15px;
@@ -148,10 +176,41 @@ input {
         box-shadow 0.2s;
 }
 
-
 input:focus {
-
     border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   SELECT
+   ========================= */
+
+select {
+    display: block;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 13px 14px;
+
+    margin: 12px auto;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    background: white;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #2563eb;
+
+    outline: none;
 
     box-shadow:
         0 0 0 3px rgba(37, 99, 235, 0.12);
@@ -164,7 +223,6 @@ input:focus {
 
 #sellerForm button,
 #transportForm button {
-
     background: #2563eb;
 
     color: white;
@@ -178,7 +236,6 @@ input:focus {
     cursor: pointer;
 
     font-size: 15px;
-
     font-weight: 600;
 
     margin-top: 10px;
@@ -188,10 +245,8 @@ input:focus {
         transform 0.2s;
 }
 
-
 #sellerForm button:hover,
 #transportForm button:hover {
-
     background: #1d4ed8;
 
     transform: translateY(-1px);
@@ -203,7 +258,6 @@ input:focus {
    ========================= */
 
 #message {
-
     margin-top: 40px;
 }
 
@@ -213,7 +267,6 @@ input:focus {
    ========================= */
 
 .inventory-container {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -231,7 +284,6 @@ input:focus {
    ========================= */
 
 .inventory-card {
-
     background: white;
 
     width: 300px;
@@ -252,18 +304,14 @@ input:focus {
         box-shadow 0.2s;
 }
 
-
 .inventory-card:hover {
-
     transform: translateY(-4px);
 
     box-shadow:
         0 12px 28px rgba(0, 0, 0, 0.10);
 }
 
-
 .inventory-card h3 {
-
     margin-top: 0;
 
     margin-bottom: 18px;
@@ -271,9 +319,7 @@ input:focus {
     font-size: 20px;
 }
 
-
 .inventory-card p {
-
     margin: 9px 0;
 
     color: #4b5563;
@@ -287,11 +333,9 @@ input:focus {
    ========================= */
 
 .inventory-card label {
-
     display: block;
 
     margin-top: 18px;
-
     margin-bottom: 6px;
 
     font-weight: bold;
@@ -299,9 +343,7 @@ input:focus {
     color: #374151;
 }
 
-
 .inventory-card input {
-
     width: 100%;
 
     margin: 6px 0 12px;
@@ -313,7 +355,6 @@ input:focus {
    ========================= */
 
 .request-button {
-
     width: 100%;
 
     margin: 12px 0 0;
@@ -339,9 +380,7 @@ input:focus {
         transform 0.2s;
 }
 
-
 .request-button:hover {
-
     background: #1d4ed8;
 
     transform: translateY(-1px);
@@ -353,7 +392,6 @@ input:focus {
    ========================= */
 
 .transport-match {
-
     margin-top: 18px;
 
     padding: 16px;
@@ -365,9 +403,7 @@ input:focus {
     border-radius: 10px;
 }
 
-
 .transport-match h4 {
-
     margin-top: 0;
 
     margin-bottom: 12px;
@@ -375,9 +411,7 @@ input:focus {
     font-size: 16px;
 }
 
-
 .transport-match p {
-
     margin: 6px 0;
 
     color: #166534;
@@ -385,12 +419,11 @@ input:focus {
 
 
 /* =========================
-   GENERAL BUTTONS INSIDE
-   REQUEST CARDS
+   GENERAL BUTTONS
+   INSIDE REQUEST CARDS
    ========================= */
 
 .inventory-card button:not(.request-button) {
-
     padding: 10px 14px;
 
     margin: 10px 5px 0 0;
@@ -408,117 +441,30 @@ input:focus {
     font-size: 14px;
 }
 
-
 .inventory-card button:not(.request-button):hover {
-
     background: #1d4ed8;
+
+    transform: translateY(-1px);
 }
 
 
 /* =========================
-   MOBILE RESPONSIVE
+   RESET BUTTON
    ========================= */
 
-@media (max-width: 600px) {
-
-    header {
-
-        padding: 35px 15px;
-
-    }
-    
-
-    header h1 {
-
-        font-size: 38px;
-
-    }
-
-
-    header p {
-
-        font-size: 16px;
-
-    }
-
-
-    main {
-
-        padding: 25px 15px;
-
-    }
-
-
-    main > button {
-
-        width: 100%;
-
-        max-width: 350px;
-
-    }
-
-
-    .inventory-card {
-
-        width: 100%;
-
-        max-width: 350px;
-
-    }
-
-
-    #sellerForm,
-    #transportForm {
-
-        width: 100%;
-
-        padding: 22px;
-
-    }
-
-}
-select {
-
-    display: block;
-
-    width: 100%;
-
-    max-width: 420px;
-
-    padding: 13px 14px;
-
-    margin: 12px auto;
-
-    border: 1px solid #d1d5db;
-
-    border-radius: 8px;
-
-    font-size: 15px;
-
-    background: white;
-
-    cursor: pointer;
-}
-
-
-select:focus {
-
-    border-color: #2563eb;
-
-    outline: none;
-
-    box-shadow:
-        0 0 0 3px rgba(37, 99, 235, 0.12);
-}
 .reset-button {
     background: #fee2e2 !important;
+
     color: #991b1b !important;
+
     border: 1px solid #fecaca !important;
 }
 
 .reset-button:hover {
     background: #fecaca !important;
 }
+
+
 /* =========================
    FLOWX DASHBOARD
    ========================= */
@@ -529,64 +475,159 @@ select:focus {
 
 #dashboard h2 {
     margin-bottom: 24px;
+
     font-size: 28px;
+
     color: #111827;
 }
 
 .dashboard-container {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 18px;
+
     max-width: 950px;
+
     margin: auto;
 }
 
 .dashboard-card {
     background: white;
+
     padding: 24px 18px;
+
     border-radius: 16px;
+
     border: 1px solid #e5e7eb;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s, box-shadow 0.2s;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
 .dashboard-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.10);
 }
 
 .dashboard-card h3 {
     font-size: 30px;
+
     margin: 0 0 10px;
 }
 
 .dashboard-card p {
     margin: 0;
+
     color: #6b7280;
+
     font-size: 14px;
+
     font-weight: 600;
 }
 
 .dashboard-card strong {
     display: block;
+
     margin-top: 10px;
+
     font-size: 32px;
+
     color: #111827;
 }
 
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
 @media screen and (max-width: 600px) {
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    main > button {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* Navigation */
+
+    .flowx-navigation {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+        margin: 20px 0 25px;
+    }
+
+    .flowx-navigation button {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Inventory */
+
+    .inventory-card {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Forms */
+
+    #sellerForm,
+    #transportForm {
+        width: 100%;
+
+        padding: 22px;
+    }
+
+
+    /* Dashboard */
 
     #dashboard .dashboard-container {
         display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
         gap: 12px !important;
+
         width: 100%;
     }
 
     #dashboard .dashboard-card {
         width: auto !important;
+
         min-width: 0;
+
         padding: 18px 8px;
     }
-
 }
