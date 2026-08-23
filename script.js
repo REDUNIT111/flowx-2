@@ -13,6 +13,21 @@ function showSellerForm() {
     if (message) {
         message.innerHTML = "";
     }
+
+    // Active navigation button
+    const sellButton =
+        document.getElementById("sellInventoryBtn");
+
+    const requestsButton =
+        document.getElementById("viewRequestsBtn");
+
+    if (sellButton) {
+        sellButton.classList.add("active");
+    }
+
+    if (requestsButton) {
+        requestsButton.classList.remove("active");
+    }
 }
 function convertToKg(quantity, unit) {
 
@@ -261,7 +276,27 @@ function showTransport() {
 
     if (message) {
         message.innerHTML = "";
+        const addButton =
+        document.getElementById("addTransportBtn");
+
+    const availableButton =
+        document.getElementById("availableTransportBtn");
+
+    const requestsButton =
+        document.getElementById("transportRequestsBtn");
+
+    if (addButton) {
+        addButton.classList.add("active");
     }
+
+    if (availableButton) {
+        availableButton.classList.remove("active");
+    }
+
+    if (requestsButton) {
+        requestsButton.classList.remove("active");
+    }
+}
 }
 function submitTransport() {
 
@@ -505,6 +540,22 @@ function requestInventory(index) {
     );
 }
 function showRequests() {
+
+    // Active navigation button
+    const sellButton =
+        document.getElementById("sellInventoryBtn");
+
+    const requestsButton =
+        document.getElementById("viewRequestsBtn");
+
+    if (sellButton) {
+        sellButton.classList.remove("active");
+    }
+
+    if (requestsButton) {
+        requestsButton.classList.add("active");
+    }
+
 
     const sellerForm =
         document.getElementById("sellerForm");
@@ -1255,7 +1306,26 @@ function useTransport(index) {
     );
 }
 function showTransportList() {
+        const addButton =
+        document.getElementById("addTransportBtn");
 
+    const availableButton =
+        document.getElementById("availableTransportBtn");
+
+    const requestsButton =
+        document.getElementById("transportRequestsBtn");
+
+    if (addButton) {
+        addButton.classList.remove("active");
+    }
+
+    if (availableButton) {
+        availableButton.classList.add("active");
+    }
+
+    if (requestsButton) {
+        requestsButton.classList.remove("active");
+    }
     const sellerForm =
         document.getElementById("sellerForm");
 
@@ -1664,7 +1734,26 @@ function rejectTransportRequest(index) {
     showTransportRequests();
 }
 function showTransportRequests() {
+        const addButton =
+        document.getElementById("addTransportBtn");
 
+    const availableButton =
+        document.getElementById("availableTransportBtn");
+
+    const requestsButton =
+        document.getElementById("transportRequestsBtn");
+
+    if (addButton) {
+        addButton.classList.remove("active");
+    }
+
+    if (availableButton) {
+        availableButton.classList.remove("active");
+    }
+
+    if (requestsButton) {
+        requestsButton.classList.add("active");
+    }
     document.getElementById("sellerForm").style.display = "none";
     document.getElementById("transportForm").style.display = "none";
 
