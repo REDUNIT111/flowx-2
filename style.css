@@ -631,3 +631,19 @@ select:focus {
         padding: 18px 8px;
     }
 }
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.brand h1 {
+    margin: 0;
+}
