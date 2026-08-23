@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlowX - Seller</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>FlowX</h1>
+        <p>Seller Dashboard</p>
+    </header>
+
+    <main>
+
+        <!-- =========================
+             NAVIGATION
+             ========================= -->
+
+        <div class="flowx-navigation">
+
+            <button onclick="window.location.href='index.html'">
+                🏠 Dashboard
+            </button>
+
+            <button onclick="showSellerForm()">
+                📦 Sell Excess Inventory
+            </button>
+
+            <button onclick="showRequests()">
+                📋 View Requests
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             SELL INVENTORY FORM
+             ========================= -->
+
+        <div id="sellerForm">
+
+            <h2>Sell Excess Inventory</h2>
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Product name"
+            >
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                min="1"
+            >
+
+            <select id="unit">
+
+                <option value="">
+                    Select unit
+                </option>
+
+                <option value="kg">
+                    Kilograms (kg)
+                </option>
+
+                <option value="tonnes">
+                    Tonnes
+                </option>
+
+                <option value="units">
+                    Units
+                </option>
+
+                <option value="boxes">
+                    Boxes
+                </option>
+
+                <option value="litres">
+                    Litres
+                </option>
+
+            </select>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Pickup location"
+            >
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Price per unit (₹)"
+                min="0"
+                step="0.01"
+            >
+
+            <button onclick="submitInventory()">
+                Add Inventory
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             REQUESTS / MESSAGES
+             ========================= -->
+
+        <div id="message"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

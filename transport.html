@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlowX - Transporter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>FlowX</h1>
+        <p>Transport unused capacity efficiently.</p>
+    </header>
+
+    <main>
+
+        <!-- =========================
+             NAVIGATION
+             ========================= -->
+
+        <div class="flowx-navigation">
+
+            <button onclick="window.location.href='index.html'">
+                🏠 Dashboard
+            </button>
+
+            <button onclick="showTransport()">
+                🚚 Add Transport Capacity
+            </button>
+
+            <button onclick="showTransportList()">
+                🚛 Available Transport
+            </button>
+
+            <button onclick="showTransportRequests()">
+                📋 Transport Requests
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             TRANSPORT FORM
+             ========================= -->
+
+        <div id="transportForm">
+
+            <h2>Add Transport Capacity</h2>
+
+            <input
+                type="text"
+                id="vehicleType"
+                placeholder="Vehicle type (e.g. Truck)"
+            >
+
+            <input
+                type="number"
+                id="capacity"
+                placeholder="Available capacity"
+                min="1"
+            >
+
+            <select id="capacityUnit">
+
+                <option value="">
+                    Select capacity unit
+                </option>
+
+                <option value="kg">
+                    Kilograms (kg)
+                </option>
+
+                <option value="tonnes">
+                    Tonnes
+                </option>
+
+                <option value="units">
+                    Units
+                </option>
+
+                <option value="boxes">
+                    Boxes
+                </option>
+
+                <option value="litres">
+                    Litres
+                </option>
+
+            </select>
+
+            <input
+                type="text"
+                id="transportFrom"
+                placeholder="Starting location"
+            >
+
+            <input
+                type="text"
+                id="transportTo"
+                placeholder="Destination"
+            >
+
+            <input
+                type="number"
+                id="transportPrice"
+                placeholder="Transport price (₹)"
+                min="0"
+                step="0.01"
+            >
+
+            <button onclick="submitTransport()">
+                Add Transport
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             TRANSPORT CONTENT
+             ========================= -->
+
+        <div id="message"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
