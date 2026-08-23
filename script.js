@@ -123,13 +123,29 @@ const unit =
 
 function showInventory() {
 
-    document.getElementById("sellerForm").style.display = "none";
-    document.getElementById("transportForm").style.display = "none";
-    const message = document.getElementById("message");
+    const sellerForm =
+        document.getElementById("sellerForm");
+
+    const transportForm =
+        document.getElementById("transportForm");
+
+    const message =
+        document.getElementById("message");
+
+    if (!message) {
+        return;
+    }
+
+    if (sellerForm) {
+        sellerForm.style.display = "none";
+    }
+
+    if (transportForm) {
+        transportForm.style.display = "none";
+    }
 
     const savedData =
         localStorage.getItem("flowxInventory");
-
 
     if (!savedData) {
 
@@ -140,14 +156,24 @@ function showInventory() {
         return;
     }
 
+    let inventories;
 
-    let inventories = JSON.parse(savedData);
+    try {
+        inventories = JSON.parse(savedData);
+    } catch (error) {
 
+        console.error("Invalid inventory data:", error);
+
+        message.innerHTML =
+            "<h2>Available Inventory</h2>" +
+            "<p>There was an error loading inventory.</p>";
+
+        return;
+    }
 
     if (!Array.isArray(inventories)) {
         inventories = [inventories];
     }
-
 
     if (inventories.length === 0) {
 
@@ -158,11 +184,9 @@ function showInventory() {
         return;
     }
 
-
     let output =
         "<h2>Available Inventory</h2>" +
         "<div class='inventory-container'>";
-
 
     inventories.forEach(function(inventory, index) {
 
@@ -175,33 +199,35 @@ function showInventory() {
             "</h3>" +
 
             "<p><strong>Available:</strong> " +
-inventory.quantity +
-" " +
-(inventory.unit || "units") +
-"</p>" +
-            "<label>Delivery location:</label>" +
-
-"<input " +
-"type='text' " +
-"id='deliveryLocation" + index + "'" +
-"placeholder='Where should it be delivered?'>" +
+            inventory.quantity +
+            " " +
+            (inventory.unit || "units") +
+            "</p>" +
 
             "<p><strong>Pickup:</strong> " +
-inventory.location +
-"</p>" +
+            inventory.location +
+            "</p>" +
+
             "<p><strong>Price:</strong> ₹" +
-inventory.price +
-" / " +
-(inventory.unit || "unit") +
-"</p>" +
+            inventory.price +
+            " / " +
+            (inventory.unit || "unit") +
+            "</p>" +
+
+            "<label>Delivery location:</label>" +
+
+            "<input " +
+            "type='text' " +
+            "id='deliveryLocation" + index + "' " +
+            "placeholder='Where should it be delivered?'>" +
 
             "<label>Quantity needed:</label>" +
 
             "<input " +
             "type='number' " +
-            "id='requestQuantity" + index + "'" +
+            "id='requestQuantity" + index + "' " +
             "min='1' " +
-            "max='" + inventory.quantity + "'" +
+            "max='" + inventory.quantity + "' " +
             "placeholder='Enter quantity'>" +
 
             "<button class='request-button' " +
@@ -214,7 +240,6 @@ inventory.price +
             "</div>";
 
     });
-
 
     output += "</div>";
 
@@ -1231,10 +1256,26 @@ function useTransport(index) {
 }
 function showTransportList() {
 
-    document.getElementById("sellerForm").style.display = "none";
-    document.getElementById("transportForm").style.display = "none";
+    const sellerForm =
+        document.getElementById("sellerForm");
 
-    const message = document.getElementById("message");
+    const transportForm =
+        document.getElementById("transportForm");
+
+    const message =
+        document.getElementById("message");
+
+    if (sellerForm) {
+        sellerForm.style.display = "none";
+    }
+
+    if (transportForm) {
+        transportForm.style.display = "none";
+    }
+
+    if (!message) {
+        return;
+    }
 
     const savedData =
         localStorage.getItem("flowxTransport");
@@ -1785,14 +1826,28 @@ if (transportForm) {
 }
 function showTransactions() {
 
-    document.getElementById("sellerForm").style.display = "none";
+    const sellerForm =
+        document.getElementById("sellerForm");
 
-    document.getElementById("transportForm").style.display = "none";
+    const transportForm =
+        document.getElementById("transportForm");
 
     const message =
         document.getElementById("message");
 
+    if (sellerForm) {
+        sellerForm.style.display = "none";
+    }
 
+    if (transportForm) {
+        transportForm.style.display = "none";
+    }
+
+    if (!message) {
+        return;
+    }
+
+    // Keep the rest of showTransactions() below this
     const savedTransactions =
         localStorage.getItem("flowxTransactions");
 
@@ -2017,14 +2072,19 @@ function updateDashboard() {
             transactions.length;
     }
 }
+
 updateDashboard();
 
-if (document.getElementById("message") && 
-    window.location.pathname.includes("inventory.html")) {
+if (document.getElementById("message")) {
 
-    showInventory();
+    const pageTitle = document.title;
+
+    if (pageTitle.includes("Buy Inventory")) {
+        showInventory();
+    }
 
 }
+
 console.log("FLOWX JS LOADED");
 //localStorage.removeItem("flowxInventory");
 //localStorage.removeItem("flowxRequests");
