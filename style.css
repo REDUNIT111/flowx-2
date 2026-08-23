@@ -635,15 +635,26 @@ select:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
+    margin-bottom: 8px;
 }
 
 .brand img {
-    width: 48px;
-    height: 48px;
+    width: 76px;
+    height: 76px;
     object-fit: contain;
 }
 
 .brand h1 {
     margin: 0;
+}
+@media (max-width: 600px) {
+    .brand img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .brand {
+        gap: 12px;
+    }
 }
