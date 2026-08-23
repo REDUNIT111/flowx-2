@@ -13,7 +13,10 @@
 <body>
 
     <header>
-        <h1>FlowX</h1>
+        <div class="brand">
+    <img src="flowx-icon.png" alt="FlowX logo">
+    <h1>FlowX</h1>
+</div>
         <p>Seller Dashboard</p>
     </header>
 
@@ -29,14 +32,13 @@
                 🏠 Dashboard
             </button>
 
-            <button onclick="showSellerForm()">
-                📦 Sell Excess Inventory
-            </button>
+            <button id="sellInventoryBtn" onclick="showSellerForm()">
+    📦 Sell Excess Inventory
+</button>
 
-            <button onclick="showRequests()">
-                📋 View Requests
-            </button>
-
+<button id="viewRequestsBtn" onclick="showRequests()">
+    📋 View Requests
+</button>
         </div>
 
 
