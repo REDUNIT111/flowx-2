@@ -2083,6 +2083,10 @@ if (document.getElementById("message")) {
         showInventory();
     }
 
+    if (pageTitle.includes("Transactions")) {
+        showTransactions();
+    }
+
 }
 
 console.log("FLOWX JS LOADED");
