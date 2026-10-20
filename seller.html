@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlowX - Seller</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="flowx-icon.png" alt="FlowX logo">
+            <h1>FlowX</h1>
+        </div>
+        <p>Seller Dashboard</p>
+    </header>
+
+    <nav class="site-nav">
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="seller.html" class="current" aria-current="page">📦 Seller</a>
+        <a href="inventory.html">🛒 Buy Inventory</a>
+        <a href="transport.html">🚚 Transporter</a>
+        <a href="transactions.html">📊 Transactions</a>
+    </nav>
+
+    <main>
+
+        <!-- TABS -->
+
+        <div class="flowx-navigation">
+
+            <button id="sellInventoryBtn" onclick="showSellerForm()">
+                📦 Sell Excess Inventory
+            </button>
+
+            <button id="viewRequestsBtn" onclick="showRequests()">
+                📋 View Requests
+            </button>
+
+        </div>
+
+
+        <!-- SELL INVENTORY FORM -->
+
+        <div id="sellerForm">
+
+            <h2>Sell Excess Inventory</h2>
+            <p class="form-note">List surplus stock so buyers can find it.</p>
+
+            <div class="form-field">
+                <label for="productName">Product name</label>
+                <input type="text" id="productName" placeholder="e.g. Rice">
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-field">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" placeholder="e.g. 100" min="1">
+                </div>
+
+                <div class="form-field">
+                    <label for="unit">Unit</label>
+                    <select id="unit">
+                <option value="">Select unit</option>
+                <option value="kg">Kilograms (kg)</option>
+                <option value="tonnes">Tonnes</option>
+                <option value="units">Units</option>
+                <option value="boxes">Boxes</option>
+                <option value="litres">Litres</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-field">
+                <label for="location">Pickup location</label>
+                <input type="text" id="location" list="flowxCitySuggestions" placeholder="e.g. Bilaspur">
+            </div>
+
+            <div class="form-field">
+                <label for="price">Price per unit (₹)</label>
+                <input type="number" id="price" placeholder="e.g. 20" min="0" step="0.01">
+            </div>
+
+            <p class="form-hint">
+                ℹ️ Automatic transport matching supports matching units; kg and tonnes can also match each other.
+            </p>
+
+            <button class="form-submit" onclick="submitInventory()">
+                Add Inventory
+            </button>
+
+        </div>
+
+
+        <!-- REQUESTS / MESSAGES -->
+
+        <div id="message"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
