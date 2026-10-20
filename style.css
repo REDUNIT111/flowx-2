@@ -1178,3 +1178,22 @@ main > .actions-section button,
         gap: 10px;
     }
 }
+
+.site-footer {
+  text-align: center;
+  padding: 24px 16px;
+  margin-top: 40px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.site-footer a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
