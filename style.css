@@ -1,0 +1,895 @@
+/* =========================
+   FLOWX - MAIN STYLES
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    position: relative;
+    background:
+        radial-gradient(circle at 85% -20%, rgba(34, 211, 238, 0.28), transparent 50%),
+        radial-gradient(circle at 5% 120%, rgba(37, 99, 235, 0.35), transparent 55%),
+        linear-gradient(135deg, #0a1a3f, #12306e);
+    color: white;
+    padding: 38px 20px 46px;
+    text-align: center;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #22d3ee, #22c55e);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 46px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #dbeafe;
+}
+
+.header-sub {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: #a5f3fc;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+/* =========================
+   MAIN NAVIGATION BUTTONS
+   ========================= */
+
+main > button {
+    background: white;
+    color: #222;
+    border: 1px solid #d1d5db;
+    padding: 13px 22px;
+    margin: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+main > button:hover {
+    transform: translateY(-2px);
+    background: #f9fafb;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FLOWX NAVIGATION
+   ========================= */
+
+.flowx-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 30px;
+}
+
+.flowx-navigation button {
+    background: white;
+    color: #222;
+    border: 1px solid #d1d5db;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+.flowx-navigation button:hover {
+    transform: translateY(-2px);
+    background: #f9fafb;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   FORMS
+   ========================= */
+
+#sellerForm,
+#transportForm {
+    display: none;
+
+    background: white;
+
+    padding: 30px;
+    margin: 35px auto;
+
+    max-width: 520px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+#sellerForm h2,
+#transportForm h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+input {
+    display: block;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 13px 14px;
+
+    margin: 12px auto;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border 0.2s,
+        box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   SELECT
+   ========================= */
+
+select {
+    display: block;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 13px 14px;
+
+    margin: 12px auto;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    background: white;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #2563eb;
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   FORM BUTTONS
+   ========================= */
+
+#sellerForm button,
+#transportForm button {
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 24px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-top: 10px;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+#sellerForm button:hover,
+#transportForm button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   MESSAGE AREA
+   ========================= */
+
+#message {
+    margin-top: 40px;
+}
+
+
+/* =========================
+   INVENTORY GRID
+   ========================= */
+
+.inventory-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   INVENTORY CARD
+   ========================= */
+
+.inventory-card {
+    background: white;
+
+    width: 300px;
+
+    padding: 24px;
+
+    border-radius: 14px;
+
+    text-align: left;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.inventory-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+.inventory-card h3 {
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+    font-size: 20px;
+}
+
+.inventory-card p {
+    margin: 9px 0;
+
+    color: #4b5563;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   INVENTORY INPUT
+   ========================= */
+
+.inventory-card label {
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 6px;
+
+    font-weight: bold;
+
+    color: #374151;
+}
+
+.inventory-card input {
+    width: 100%;
+
+    margin: 6px 0 12px;
+}
+
+
+/* =========================
+   REQUEST BUTTON
+   ========================= */
+
+.request-button {
+    width: 100%;
+
+    margin: 12px 0 0;
+
+    padding: 12px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+.request-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   TRANSPORT MATCH
+   ========================= */
+
+.transport-match {
+    margin-top: 18px;
+
+    padding: 16px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 10px;
+}
+
+.transport-match h4 {
+    margin-top: 0;
+
+    margin-bottom: 12px;
+
+    font-size: 16px;
+}
+
+.transport-match p {
+    margin: 6px 0;
+
+    color: #166534;
+}
+
+
+/* =========================
+   GENERAL BUTTONS
+   INSIDE REQUEST CARDS
+   ========================= */
+
+.inventory-card button:not(.request-button) {
+    padding: 10px 14px;
+
+    margin: 10px 5px 0 0;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.inventory-card button:not(.request-button):hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   RESET BUTTON
+   ========================= */
+
+.reset-button {
+    background: #fee2e2 !important;
+
+    color: #991b1b !important;
+
+    border: 1px solid #fecaca !important;
+}
+
+.reset-button:hover {
+    background: #fecaca !important;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 35px 15px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    main > button {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* Navigation */
+
+    .flowx-navigation {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+        margin: 20px 0 25px;
+    }
+
+    .flowx-navigation button {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Inventory */
+
+    .inventory-card {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    /* Forms */
+
+    #sellerForm,
+    #transportForm {
+        width: 100%;
+
+        padding: 22px;
+    }
+}
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.brand img {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    background: white;
+    border-radius: 20px;
+    padding: 2px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.brand h1 {
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .brand img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .brand {
+        gap: 12px;
+    }
+}
+#sellInventoryBtn,
+#viewRequestsBtn,
+#addTransportBtn,
+#availableTransportBtn,
+#transportRequestsBtn {
+    transition: 0.2s ease;
+}
+
+#sellInventoryBtn.active,
+#viewRequestsBtn.active,
+#addTransportBtn.active,
+#availableTransportBtn.active,
+#transportRequestsBtn.active {
+    background-color: #01ffff;
+    color: black;
+}
+
+
+/* =========================
+   DASHBOARD
+   ========================= */
+
+.section-head {
+    margin-bottom: 22px;
+}
+
+.section-head h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #0a1a3f;
+}
+
+.section-head p {
+    margin: 6px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+#dashboard {
+    margin-bottom: 44px;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.dashboard-card {
+    --accent: #2563eb;
+    --tint: #dbeafe;
+
+    position: relative;
+    overflow: hidden;
+
+    background: white;
+    padding: 22px 20px 20px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+
+    box-shadow: 0 6px 20px rgba(10, 26, 63, 0.06);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(10, 26, 63, 0.12);
+}
+
+.card-inventory { --accent: #f59e0b; --tint: #fef3c7; }
+.card-transport { --accent: #2563eb; --tint: #dbeafe; }
+.card-requests  { --accent: #06b6d4; --tint: #cffafe; }
+.card-deals     { --accent: #22c55e; --tint: #dcfce7; }
+
+.card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--tint);
+    font-size: 24px;
+}
+
+.dashboard-card p {
+    margin: 14px 0 0;
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-card strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 40px;
+    line-height: 1.1;
+    color: #0a1a3f;
+}
+
+.dashboard-card small {
+    display: block;
+    margin-top: 6px;
+    color: #9ca3af;
+    font-size: 12.5px;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+   ========================= */
+
+.actions-section {
+    margin-bottom: 44px;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+main > .actions-section button,
+.action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+
+    margin: 0;
+    padding: 20px;
+
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.action-card:hover {
+    transform: translateY(-4px);
+    border-color: #93c5fd;
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.14);
+}
+
+.action-card:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.35);
+    outline-offset: 2px;
+}
+
+.action-icon {
+    font-size: 26px;
+}
+
+.action-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0a1a3f;
+}
+
+.action-text {
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #6b7280;
+}
+
+
+/* =========================
+   HOW IT WORKS
+   ========================= */
+
+.flow-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 14px;
+
+    margin-bottom: 44px;
+    padding: 22px;
+
+    background: linear-gradient(135deg, #eff6ff, #ecfeff);
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+}
+
+.flow-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    max-width: 300px;
+
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #4b5563;
+}
+
+.flow-step strong {
+    font-size: 17px;
+    color: #0a1a3f;
+}
+
+.flow-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+    font-weight: 700;
+}
+
+.flow-arrow {
+    align-self: center;
+    font-size: 24px;
+    color: #60a5fa;
+}
+
+
+/* =========================
+   DEMO TOOLS
+   ========================= */
+
+.demo-tools p {
+    margin: 10px 0 0;
+    font-size: 12.5px;
+    color: #9ca3af;
+}
+
+.demo-tools .reset-button {
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   DASHBOARD RESPONSIVE
+   ========================= */
+
+@media screen and (max-width: 900px) {
+
+    .dashboard-container,
+    .action-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .dashboard-container {
+        gap: 12px;
+    }
+
+    .dashboard-card {
+        padding: 18px 14px 16px;
+    }
+
+    .dashboard-card strong {
+        font-size: 32px;
+    }
+
+    .dashboard-card small {
+        display: none;
+    }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .flow-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flow-step {
+        max-width: none;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}

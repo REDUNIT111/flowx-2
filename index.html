@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlowX - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="flowx-icon.png" alt="FlowX logo">
+            <h1>FlowX</h1>
+        </div>
+        <p>Less Dead Stock. Fewer Empty Miles.</p>
+        <span class="header-sub">Inventory | Demand | Transport</span>
+    </header>
+
+    <main>
+
+        <!-- =========================
+             DASHBOARD
+             ========================= -->
+
+        <section id="dashboard">
+
+            <div class="section-head">
+                <h2>FlowX Dashboard</h2>
+                <p>Live snapshot of the demo data saved in this browser</p>
+            </div>
+
+            <div class="dashboard-container">
+
+                <div class="dashboard-card card-inventory">
+                    <span class="card-icon">📦</span>
+                    <p>Inventory Listings</p>
+                    <strong id="inventoryCount">0</strong>
+                    <small>Surplus stock available</small>
+                </div>
+
+                <div class="dashboard-card card-transport">
+                    <span class="card-icon">🚚</span>
+                    <p>Transport Listings</p>
+                    <strong id="transportCount">0</strong>
+                    <small>Vehicles with free capacity</small>
+                </div>
+
+                <div class="dashboard-card card-requests">
+                    <span class="card-icon">📋</span>
+                    <p>Pending Requests</p>
+                    <strong id="requestCount">0</strong>
+                    <small>Waiting for a decision</small>
+                </div>
+
+                <div class="dashboard-card card-deals">
+                    <span class="card-icon">✅</span>
+                    <p>Completed Deals</p>
+                    <strong id="transactionCount">0</strong>
+                    <small>Goods matched with transport</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK ACTIONS
+             ========================= -->
+
+        <section class="actions-section">
+
+            <div class="section-head">
+                <h2>Get started</h2>
+                <p>Choose your role to continue</p>
+            </div>
+
+            <div class="action-grid">
+
+                <button class="action-card" onclick="window.location.href='seller.html'">
+                    <span class="action-icon">📦</span>
+                    <span class="action-title">Seller</span>
+                    <span class="action-text">List surplus stock and review buyer requests</span>
+                </button>
+
+                <button class="action-card" onclick="window.location.href='inventory.html'">
+                    <span class="action-icon">🛒</span>
+                    <span class="action-title">Buy Inventory</span>
+                    <span class="action-text">Browse available goods and send a request</span>
+                </button>
+
+                <button class="action-card" onclick="window.location.href='transport.html'">
+                    <span class="action-icon">🚚</span>
+                    <span class="action-title">Transporter</span>
+                    <span class="action-text">Register routes and free vehicle capacity</span>
+                </button>
+
+                <button class="action-card" onclick="window.location.href='transactions.html'">
+                    <span class="action-icon">📊</span>
+                    <span class="action-title">Transactions</span>
+                    <span class="action-text">See completed deals and truck utilization</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HOW IT WORKS
+             ========================= -->
+
+        <section class="flow-section">
+
+            <div class="flow-step">
+                <span class="flow-number">1</span>
+                <strong>List</strong>
+                <span>Sellers add surplus stock. Transporters add routes and capacity.</span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-step">
+                <span class="flow-number">2</span>
+                <strong>Match</strong>
+                <span>Rules check route, capacity and cost for each request.</span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-step">
+                <span class="flow-number">3</span>
+                <strong>Connect</strong>
+                <span>The deal and its transport are recorded as a transaction.</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESET DEMO
+             ========================= -->
+
+        <div class="demo-tools">
+            <button
+                onclick="resetFlowXData()"
+                class="reset-button">
+                🗑️ Reset Demo Data
+            </button>
+            <p>Clears everything saved in this browser. Use it before a fresh demo.</p>
+        </div>
+
+        <div id="message"></div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
